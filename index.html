@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>
+            <i class="fa-solid fa-briefcase"></i>
+            Job Application Tracker
+        </h1>
+        <p>Track your job applications easily.</p>
+    </header>
+
+    <div class="top-bar">
+        <a href="add.html" class="add-btn">
+            <i class="fa-solid fa-plus"></i>
+            Add Application
+        </a>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search company or position..."
+        >
+    </div>
+
+    <div class="table-container">
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Position</th>
+                    <th>Date Applied</th>
+                    <th>Status</th>
+                    <th>Notes</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="applicationList"></tbody>
+
+        </table>
+    </div>
+
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Job Application</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>
+            <i class="fa-solid fa-plus"></i>
+            Add Job Application
+        </h1>
+        <p>Fill in the information below.</p>
+    </header>
+
+    <div class="form-card">
+
+        <form id="applicationForm">
+
+            <div class="form-group">
+                <label>Company Name</label>
+
+                <select id="company" required>
+                    <option value="">-- Select Company --</option>
+                    <option value="Accenture">Accenture</option>
+                    <option value="Cloudstaff">Cloudstaff</option>
+                    <option value="Concentrix">Concentrix</option>
+                    <option value="IBM">IBM</option>
+                    <option value="TaskUs">TaskUs</option>
+                    <option value="Foundever">Foundever</option>
+                    <option value="DXC Technology">DXC Technology</option>
+                    <option value="Telus International">Telus International</option>
+                    <option value="Cognizant">Cognizant</option>
+                    <option value="Trend Micro">Trend Micro</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="otherCompanyGroup" style="display: none;">
+                <label>Other Company</label>
+
+                <input
+                    type="text"
+                    id="otherCompany"
+                    placeholder="Enter company name"
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Position</label>
+
+                <input
+                    type="text"
+                    id="position"
+                    placeholder="Enter position"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Date Applied</label>
+
+                <input
+                    type="date"
+                    id="dateApplied"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Status</label>
+
+                <select id="status">
+                    <option value="Pending">Pending</option>
+                    <option value="Interview">Interview</option>
+                    <option value="Hired">Hired</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Notes</label>
+
+                <textarea
+                    id="notes"
+                    rows="5"
+                    placeholder="Enter notes..."
+                ></textarea>
+            </div>
+
+            <div class="buttons">
+
+                <button type="submit" class="save-btn">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    Save
+                </button>
+
+                <a href="index.html" class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
