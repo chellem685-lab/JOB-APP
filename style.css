@@ -1,0 +1,1464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #eef2f7;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* LOGIN PAGE */
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* LOGIN CONTAINER */
+.login-container {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 650px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .12);
+}
+
+/* LEFT PANEL */
+.left-panel {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 50px;
+}
+
+.logo i {
+    font-size: 30px;
+}
+
+.left-panel h1 {
+    font-size: 38px;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.left-panel p {
+    color: #6b7280;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* INPUT */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: .3s;
+}
+
+.input-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, .12);
+}
+
+/* BUTTONS — shared professional base */
+.login-btn,
+.change-password-btn,
+.save-btn,
+.reset-btn,
+.add-btn,
+.submit-application,
+.password-form button,
+#sendOtpBtn,
+#verifyOtpBtn,
+#updatePasswordBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, .06);
+    transition: background-color .15s ease, box-shadow .15s ease, transform .05s ease;
+}
+
+.login-btn:hover,
+.change-password-btn:hover,
+.save-btn:hover,
+.reset-btn:hover,
+.add-btn:hover,
+.submit-application:hover,
+.password-form button:hover,
+#sendOtpBtn:hover,
+#verifyOtpBtn:hover,
+#updatePasswordBtn:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, .22);
+}
+
+.login-btn:active,
+.change-password-btn:active,
+.save-btn:active,
+.reset-btn:active,
+.add-btn:active,
+.submit-application:active,
+.password-form button:active,
+#sendOtpBtn:active,
+#verifyOtpBtn:active,
+#updatePasswordBtn:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(16, 24, 40, .06);
+}
+
+.login-btn:disabled,
+.change-password-btn:disabled,
+.save-btn:disabled,
+.reset-btn:disabled,
+.add-btn:disabled,
+.submit-application:disabled,
+.password-form button:disabled,
+#sendOtpBtn:disabled,
+#verifyOtpBtn:disabled,
+#updatePasswordBtn:disabled {
+    background: #93b4f0;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+}
+
+/* DIVIDER */
+.divider {
+    text-align: center;
+    margin: 28px 0;
+    position: relative;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #e5e7eb;
+}
+
+.divider span {
+    position: relative;
+    background: white;
+    padding: 0 15px;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* GOOGLE BUTTON */
+.google-btn {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
+    background-image: url("../image/google-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #374151;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, .06);
+    transition: box-shadow .15s ease, transform .05s ease;
+}
+
+.google-btn:hover {
+    box-shadow: 0 4px 10px rgba(16, 24, 40, .12);
+}
+
+.google-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(16, 24, 40, .06);
+}
+
+.google-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* REGISTER */
+.register {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.register a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* SHOW PASSWORD */
+.show-password {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.show-password input {
+    width: 15px;
+    height: 15px;
+}
+
+.show-password label {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, .45),
+            rgba(0, 0, 0, .45)
+        ),
+        url("../image/Job.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    text-align: center;
+}
+
+/* DASHBOARD */
+.dashboard-page {
+    background: #eef2f7;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: #ffffff;
+    padding: 30px 20px;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, .08);
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2563eb;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.sidebar .logo i {
+    font-size: 30px;
+}
+
+/* MENU */
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px;
+    border-radius: 12px;
+    color: #374151;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.menu li a i {
+    font-size: 20px;
+}
+
+.menu li a:hover {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.menu .active a {
+    background: #2563eb;
+    color: white;
+}
+
+/* MAIN */
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+}
+
+/* TOPBAR */
+.topbar {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+    margin-bottom: 30px;
+}
+
+.topbar h2 {
+    color: #111827;
+}
+
+.topbar small {
+    color: #6b7280;
+}
+
+/* ADMIN PROFILE */
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.notification i {
+    font-size: 22px;
+}
+
+.admin-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-info > i {
+    font-size: 35px;
+    color: #2563eb;
+}
+
+.admin-info strong {
+    display: block;
+}
+
+.admin-info small {
+    color: #6b7280;
+}
+
+/* TABLE */
+.table-section {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+.table-header {
+    margin-bottom: 20px;
+}
+
+.table-header h3 {
+    color: #111827;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 15px;
+    background: #f3f4f6;
+    color: #374151;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #6b7280;
+    text-align: center;
+}
+
+/* ===================== */
+/* APPLICANTS PAGE */
+/* ===================== */
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-btn {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-btn:hover {
+    background: #1d4ed8;
+}
+
+/* ACTION BUTTONS */
+.view-btn,
+.edit-btn,
+.delete-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background-color .15s ease, color .15s ease, box-shadow .15s ease, transform .05s ease;
+}
+
+.view-btn {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.edit-btn {
+    background: #fffbeb;
+    color: #b45309;
+}
+
+.delete-btn {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.view-btn:hover {
+    background: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, .25);
+}
+
+.edit-btn:hover {
+    background: #f59e0b;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(245, 158, 11, .25);
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(220, 38, 38, .25);
+}
+
+.view-btn:active,
+.edit-btn:active,
+.delete-btn:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+/* ===================== */
+/* PROFILE PAGE */
+/* ===================== */
+
+.profile-section {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card {
+    background: #fff;
+    width: 450px;
+    padding: 40px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+.profile-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    color: #2563eb;
+}
+
+.profile-image i {
+    font-size: 45px;
+}
+
+.profile-card h3 {
+    margin-top: 20px;
+    color: #111827;
+}
+
+.profile-card p {
+    color: #6b7280;
+}
+
+.profile-info {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.profile-info div {
+    margin-bottom: 18px;
+}
+
+.profile-info label {
+    display: block;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.profile-info span {
+    font-weight: 600;
+    color: #111827;
+}
+
+.change-password-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.change-password-btn:hover {
+    background: #1d4ed8;
+}
+
+/* PASSWORD MODAL */
+.password-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .4);
+    align-items: center;
+    justify-content: center;
+}
+
+.password-box {
+    background: white;
+    width: 400px;
+    padding: 30px;
+    border-radius: 18px;
+}
+
+.password-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.password-header i {
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.password-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.password-form input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.password-form button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+}
+
+/* ===================== */
+/* SETTINGS PAGE */
+/* ===================== */
+
+.settings-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.settings-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+.settings-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.settings-title i {
+    font-size: 30px;
+    color: #2563eb;
+}
+
+.settings-title h3 {
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+.settings-title p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* INPUT SETTINGS */
+.setting-item {
+    margin-bottom: 20px;
+}
+
+.setting-item label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.setting-item input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    outline: none;
+}
+
+.setting-item input:focus {
+    border-color: #2563eb;
+}
+
+/* OPTION */
+.setting-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.setting-option strong {
+    display: block;
+    color: #111827;
+}
+
+.setting-option small {
+    color: #6b7280;
+}
+
+.setting-option input {
+    width: 20px;
+    height: 20px;
+}
+
+/* STATUS */
+.status-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eff6ff;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.status-box strong {
+    color: #2563eb;
+}
+
+.status-box span {
+    color: #6b7280;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-approved {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status-rejected {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* SAVE BUTTON */
+.save-btn {
+    width: 180px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background: #1d4ed8;
+}
+
+/* JOB */
+#availableJobs {
+    animation: fadeInJobs 0.25s ease;
+}
+
+#availableJobs .table-header {
+    margin-bottom: 8px;
+}
+
+#availableJobs > p {
+    color: #6b7280;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* JOB CARD */
+#availableJobs .job-card {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 18px;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+/* HOVER */
+#availableJobs .job-card:hover {
+    transform: translateY(-3px);
+    border-color: #d1d5db;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* JOB ICON */
+#availableJobs .job-icon {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #f3f4f6;
+    font-size: 27px;
+    color: #374151;
+}
+
+/* JOB INFORMATION */
+#availableJobs .job-info {
+    flex: 1;
+}
+
+#availableJobs .job-info h3 {
+    margin: 0 0 7px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+}
+
+#availableJobs .job-info p {
+    margin: 0 0 14px;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* JOB DETAILS */
+#availableJobs .job-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+#availableJobs .job-details span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+#availableJobs .job-details i {
+    font-size: 15px;
+}
+
+/* APPLY BUTTON */
+#availableJobs .apply-btn {
+    border: none;
+    background: #111827;
+    color: #ffffff;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+#availableJobs .apply-btn:hover {
+    background: #374151;
+    transform: translateY(-1px);
+}
+
+/* ANIMATION */
+@keyframes fadeInJobs {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    #availableJobs .job-card {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+    #availableJobs .job-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        font-size: 23px;
+    }
+    #availableJobs .apply-btn {
+        width: 100%;
+    }
+}
+
+/* APPLICANT PROFILE */
+#profileSection {
+    animation: profileFadeIn 0.3s ease;
+}
+
+#profileSection .table-header {
+    margin-bottom: 25px;
+}
+
+/* PROFILE CARD */
+.profile-card {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* PROFILE HEADER */
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 35px;
+    text-align: left;
+    background: #f8fafc;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* AVATAR */
+.profile-avatar {
+    width: 82px;
+    height: 82px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #eef2ff;
+    border: 4px solid #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    color: #4f46e5;
+    font-size: 34px;
+}
+
+/* NAME */
+.profile-name h2 {
+    margin: 0 0 6px;
+    color: #111827;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.profile-name p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* DETAILS */
+.profile-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    padding: 30px 35px;
+}
+
+/* DETAIL BOX */
+.profile-item {
+    padding: 20px;
+    text-align: center;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    transition: 0.2s ease;
+}
+
+.profile-item:hover {
+    background: #ffffff;
+    border-color: #d1d5db;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* LABEL */
+.profile-item span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-bottom: 9px;
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.profile-item span i {
+    font-size: 16px;
+}
+
+/* VALUE */
+.profile-item strong {
+    display: block;
+    color: #111827;
+    font-size: 15px;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+/* ROLE */
+#profileRole {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #eef2ff;
+    color: #4f46e5;
+    font-size: 12px;
+}
+
+/* ANIMATION */
+@keyframes profileFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .profile-card {
+        max-width: 100%;
+    }
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* =========================
+   APPLICATION MODAL
+========================= */
+.application-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.application-modal-content {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* HEADER */
+.application-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.application-modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.application-modal-header p {
+    margin: 5px 0 0;
+    color: #777;
+}
+
+.close-application {
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-application:hover {
+    background: #f1f1f1;
+}
+
+/* FORM */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+}
+
+.form-group input[readonly] {
+    background: #f5f5f5;
+    cursor: not-allowed;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* BUTTONS */
+.application-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.cancel-application,
+.submit-application {
+    border: 1px solid transparent;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .15s ease, box-shadow .15s ease, transform .05s ease;
+}
+
+.cancel-application {
+    background: #f3f4f6;
+    border-color: #d1d5db;
+    color: #374151;
+}
+
+.cancel-application:hover {
+    background: #e5e7eb;
+}
+
+.cancel-application:active {
+    transform: translateY(1px);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .application-modal-content {
+        padding: 20px;
+    }
+    .application-actions {
+        flex-direction: column;
+    }
+    .cancel-application,
+    .submit-application {
+        width: 100%;
+    }
+}
+
+.approve-btn,
+.reject-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background-color .15s ease, color .15s ease, box-shadow .15s ease, transform .05s ease;
+}
+
+.approve-btn {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+.reject-btn {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.approve-btn:hover {
+    background: #16a34a;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(22, 163, 74, .25);
+}
+
+.reject-btn:hover {
+    background: #dc2626;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(220, 38, 38, .25);
+}
+
+.approve-btn:active,
+.reject-btn:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+.action-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+/* STATUS BADGE */
+.status-cell {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+/* FORGOT PASSWORD */
+.forgot-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.45);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.forgot-box {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    animation: forgotModalShow 0.2s ease;
+}
+
+.forgot-box h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.forgot-box p {
+    margin: 0 0 24px;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.close-forgot {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    width: 34px;
+    height: 34px;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    line-height: 1;
+    color: #6b7280;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.close-forgot:hover {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+.forgot-box .input-group {
+    margin-bottom: 20px;
+}
+
+.forgot-box .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.forgot-box .input-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.forgot-box .input-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.reset-btn {
+    width: 100%;
+    padding: 13px 16px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.reset-btn:hover {
+    background: #1d4ed8;
+}
+
+@keyframes forgotModalShow {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Login Links */
+#forgotPassword,
+#resendVerification {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+#forgotPassword {
+    color: #2563eb;
+}
+
+#resendVerification {
+    color: #64748b;
+    margin-left: 10px;
+}
+
+#forgotPassword:hover,
+#resendVerification:hover {
+    text-decoration: underline;
+}
+
+#resendVerification::before {
+    content: "|";
+    margin-right: 10px;
+    color: #cbd5e1;
+}
