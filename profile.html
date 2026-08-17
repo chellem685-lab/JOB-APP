@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Applicant Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="ri-user-star-line"></i>
+            <span>AMS</span>
+        </div>
+
+        <ul class="menu">
+            <li>
+                <a href="dashboard.html">
+                    <i class="ri-dashboard-line"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="applicants.html">
+                    <i class="ri-user-3-line"></i>
+                    <span>Applicants</span>
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="profile.html">
+                    <i class="ri-user-settings-line"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="ri-settings-3-line"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" id="logoutBtn">
+                    <i class="ri-logout-box-r-line"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Profile</h2>
+                <small>Manage admin account information</small>
+            </div>
+
+            <div class="admin-profile">
+                <div class="notification">
+                    <i class="ri-notification-3-line"></i>
+                </div>
+
+                <div class="admin-info">
+                    <i class="ri-admin-line"></i>
+                    <div>
+                        <strong>Admin</strong>
+                        <small>Administrator</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <div class="profile-card">
+                <div class="profile-image">
+                    <i class="ri-admin-line"></i>
+                </div>
+
+                <h3>Admin</h3>
+                <p>Administrator</p>
+
+                <div class="profile-info">
+                    <div>
+                        <label>Full Name</label>
+                        <span>Administrator</span>
+                    </div>
+
+                    <div>
+                        <label>Email</label>
+                        <span>admin@gmail.com</span>
+                    </div>
+
+                    <div>
+                        <label>Role</label>
+                        <span>Admin</span>
+                    </div>
+                </div>
+
+                <button class="change-password-btn">
+                    <i class="ri-lock-password-line"></i>
+                    Change Password
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Change Password Modal -->
+    <div class="password-modal">
+        <div class="password-box">
+            <div class="password-header">
+                <h3>Change Password</h3>
+                <i class="ri-close-line" id="closeModal"></i>
+            </div>
+
+            <div class="password-form">
+                <label>Current Password</label>
+                <input type="password" id="currentPassword" placeholder="Enter current password">
+
+                <label>New Password</label>
+                <input type="password" id="newPassword" placeholder="Enter new password">
+
+                <label>Confirm New Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm new password">
+
+                <button id="updatePasswordBtn">
+                    <i class="ri-lock-password-line"></i>
+                    Update Password
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./scripts/profile.js"></script>
+
+</body>
+</html>
