@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Applicant Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Left Side -->
+        <div class="left-panel">
+            <div class="logo">
+                <i class="ri-user-star-line"></i>
+                <span>Applicant Management System</span>
+            </div>
+
+            <h1>Welcome Back</h1>
+            <p>Sign in to manage applications and access your dashboard.</p>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+                <a href="#" id="forgotPassword">Forgot Password?</a>
+                
+            </form>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <button type="button" id="loginBtn" class="google-btn">
+                <img src="image/google.png" alt="Google">
+                <span>Continue with Google</span>
+            </button>
+
+            <p class="register">
+                Don't have an account?
+                <a href="register.html">Create an Account</a>
+            </p>
+        </div>
+
+        <!-- Right Side -->
+        <div class="right-panel"></div>
+    </div>
+        </div>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgotPasswordModal" class="forgot-modal">
+        <div class="forgot-box">
+
+            <button type="button" id="closeForgotModal" class="close-forgot">
+                &times;
+            </button>
+
+            <!-- STEP 1: EMAIL -->
+            <div id="forgotStep1">
+                <h2>Forgot Password?</h2>
+
+                <p>
+                    Enter your email address to receive a verification code.
+                </p>
+
+                <div class="input-group">
+                    <label for="resetEmail">Email Address</label>
+                    <input
+                        type="email"
+                        id="resetEmail"
+                        placeholder="Enter your email"
+                    >
+                </div>
+
+                <button type="button" id="sendOtpBtn" class="reset-btn">
+                    Send Reset Email
+                </button>
+            </div>
+
+            <!-- STEP 2: OTP -->
+            <div id="forgotStep2" style="display: none;">
+                <h2>Enter OTP</h2>
+
+                <p>
+                    Enter the 6-digit verification code sent to your Gmail.
+                </p>
+
+                <div class="input-group">
+                    <label for="resetOtp">OTP Code</label>
+                    <input
+                        type="text"
+                        id="resetOtp"
+                        placeholder="Enter 6-digit OTP"
+                        maxlength="6"
+                    >
+                </div>
+
+                <button type="button" id="verifyOtpBtn" class="reset-btn">
+                    Verify OTP
+                </button>
+            </div>
+
+            <!-- STEP 3: NEW PASSWORD -->
+            <div id="forgotStep3" style="display: none;">
+                <h2>Reset Password</h2>
+
+                <p>
+                    Enter your new password.
+                </p>
+
+                <div class="input-group">
+                    <label for="newPassword">New Password</label>
+                    <input
+                        type="password"
+                        id="newPassword"
+                        placeholder="Enter new password"
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="confirmNewPassword">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirmNewPassword"
+                        placeholder="Confirm new password"
+                    >
+                </div>
+
+                <button type="button" id="updatePasswordBtn" class="reset-btn">
+                    Update Password
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+     
+   
+
+    <!-- Firebase / Login JavaScript -->
+    <script type="module" src="scripts/script.js"></script>
+</body>
+</html>
