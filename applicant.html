@@ -1,0 +1,346 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Applicant | Applicant Management System</title>
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- Remix Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="ri-user-star-line"></i>
+                <span>AMS</span>
+            </div>
+
+            <ul class="menu">
+                <li class="active">
+                    <a href="#" data-target="dashboardWelcome">
+                        <i class="ri-dashboard-line"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-target="availableJobs">
+                        <i class="ri-briefcase-line"></i>
+                        <span>Available Jobs</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-target="applicationsSection">
+                        <i class="ri-file-list-3-line"></i>
+                        <span>My Applications</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-target="profileSection">
+                        <i class="ri-user-3-line"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-target="settingsSection">
+                        <i class="ri-settings-3-line"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" id="logoutBtn">
+                        <i class="ri-logout-box-r-line"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+                <div>
+                    <h2>Applicant Dashboard</h2>
+                    <small id="welcomeText">Welcome back</small>
+                </div>
+
+                <div class="admin-profile">
+                    <div class="notification">
+                        <i class="ri-notification-3-line"></i>
+                    </div>
+
+                    <div class="admin-info">
+                        <i class="ri-user-line"></i>
+                        <div>
+                            <strong id="applicantName">Applicant</strong>
+                            <small>Applicant</small>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- WELCOME SECTION -->
+            <section class="table-section" id="dashboardWelcome">
+                <div class="table-header">
+                    <h3>Welcome to your Applicant Dashboard</h3>
+                </div>
+
+                <p>
+                    From here, you can manage your applications,
+                    update your profile, and check your application status.
+                </p>
+            </section>
+
+            <!-- AVAILABLE JOBS SECTION -->
+            <section class="table-section" id="availableJobs" style="display: none;">
+                <div class="table-header">
+                    <h3>Available Jobs</h3>
+                </div>
+
+                <p>
+                    Explore available positions and apply for a job that matches your skills and interests.
+                </p>
+
+                <!-- JOB 1 -->
+                <div class="job-card">
+                    <div class="job-icon">
+                        <i class="ri-computer-line"></i>
+                    </div>
+
+                    <div class="job-info">
+                        <h3>IT Support</h3>
+                        <p>Provide technical assistance and troubleshoot computer systems.</p>
+
+                        <div class="job-details">
+                            <span><i class="ri-briefcase-line"></i> Full-time</span>
+                            <span><i class="ri-map-pin-line"></i> Isabela</span>
+                            <span><i class="ri-money-dollar-circle-line"></i> ₱18,000 - ₱25,000</span>
+                        </div>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="apply-btn"
+                        data-position="IT Support"
+                        data-location="Isabela"
+                        data-salary="₱18,000 - ₱25,000">
+                        Apply Now
+                    </button>
+                </div>
+
+                <!-- JOB 2 -->
+                <div class="job-card">
+                    <div class="job-icon">
+                        <i class="ri-router-line"></i>
+                    </div>
+
+                    <div class="job-info">
+                        <h3>Network Technician</h3>
+                        <p>Install, maintain, and troubleshoot network equipment and network connections.</p>
+
+                        <div class="job-details">
+                            <span><i class="ri-briefcase-line"></i> Full-time</span>
+                            <span><i class="ri-map-pin-line"></i> Isabela</span>
+                            <span><i class="ri-money-dollar-circle-line"></i> ₱20,000 - ₱28,000</span>
+                        </div>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="apply-btn"
+                        data-position="Network Technician"
+                        data-location="Isabela"
+                        data-salary="₱20,000 - ₱28,000">
+                        Apply Now
+                    </button>
+                </div>
+
+                <!-- JOB 3 -->
+                <div class="job-card">
+                    <div class="job-icon">
+                        <i class="ri-file-user-line"></i>
+                    </div>
+
+                    <div class="job-info">
+                        <h3>Administrative Assistant</h3>
+                        <p>Assist with administrative tasks, documents, and daily office operations.</p>
+
+                        <div class="job-details">
+                            <span><i class="ri-briefcase-line"></i> Full-time</span>
+                            <span><i class="ri-map-pin-line"></i> Isabela</span>
+                            <span><i class="ri-money-dollar-circle-line"></i> ₱16,000 - ₱22,000</span>
+                        </div>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="apply-btn"
+                        data-position="Administrative Assistant"
+                        data-location="Isabela"
+                        data-salary="₱16,000 - ₱22,000">
+                        Apply Now
+                    </button>
+                </div>
+            </section>
+
+            <!-- APPLICATION SECTION -->
+            <section class="table-section" id="applicationsSection" style="display: none;">
+                <div class="table-header">
+                    <h3>My Applications</h3>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Date Applied</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="applicationsTableBody">
+                        <tr>
+                            <td colspan="4">No applications available.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- PROFILE SECTION -->
+            <section class="table-section" id="profileSection" style="display: none;">
+                <div class="table-header">
+                    <h3>My Profile</h3>
+                </div>
+
+                <div class="profile-card">
+                    <!-- PROFILE HEADER -->
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <i class="ri-user-3-line"></i>
+                        </div>
+
+                        <div class="profile-name">
+                            <h2 id="profileFullName">Applicant</h2>
+                            <p>Applicant</p>
+                        </div>
+                    </div>
+
+                    <!-- PROFILE DETAILS -->
+                    <div class="profile-details">
+                        <div class="profile-item">
+                            <span>
+                                <i class="ri-user-line"></i>
+                                Full Name
+                            </span>
+                            <strong id="profileName"></strong>
+                        </div>
+
+                        <div class="profile-item">
+                            <span>
+                                <i class="ri-at-line"></i>
+                                Username
+                            </span>
+                            <strong id="profileUsername">—</strong>
+                        </div>
+
+                        <div class="profile-item">
+                            <span>
+                                <i class="ri-mail-line"></i>
+                                Email
+                            </span>
+                            <strong id="profileEmail">—</strong>
+                        </div>
+
+                        <div class="profile-item">
+                            <span>
+                                <i class="ri-shield-user-line"></i>
+                                Role
+                            </span>
+                            <strong id="profileRole">Applicant</strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SETTINGS SECTION -->
+            <section class="table-section" id="settingsSection" style="display: none;">
+                <div class="table-header">
+                    <h3>Settings</h3>
+                </div>
+
+                <p>
+                    Account settings will appear here.
+                </p>
+            </section>
+
+            <!-- APPLICATION MODAL -->
+            <div class="application-modal" id="applicationModal">
+                <div class="application-modal-content">
+                    <div class="application-modal-header">
+                        <div>
+                            <h2>Apply for Job</h2>
+                            <p id="applicationJobTitle">Job Position</p>
+                        </div>
+
+                        <button type="button" class="close-application" id="closeApplicationModal">
+                            <i class="ri-close-line"></i>
+                        </button>
+                    </div>
+
+                    <form id="applicationForm">
+                        <div class="form-group">
+                            <label>Position</label>
+                            <input type="text" id="applicationPosition" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="applicationName" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="applicationEmail" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Contact Number</label>
+                            <input type="tel" id="applicationContact" placeholder="Enter your contact number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Cover Letter</label>
+                            <textarea id="applicationCoverLetter" rows="5" placeholder="Tell the employer why you are suitable for this position..." required></textarea>
+                        </div>
+
+                        <div class="application-actions">
+                            <button type="button" class="cancel-application" id="cancelApplication">Cancel</button>
+                            <button type="submit" class="submit-application">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+
+        <script type="module" src="scripts/script.js"></script>
+        <script type="module" src="scripts/appli-dashboard.js"></script>
+
+    </body>
+    </html>
